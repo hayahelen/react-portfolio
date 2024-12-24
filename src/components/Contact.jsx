@@ -1,6 +1,8 @@
 import React from 'react'
 import {motion} from "framer-motion";
 import { CONTACT } from '../constants';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+
 
 const Contact = () => {
   return <div className='border-b border-neutral-900 pb-20'>
@@ -24,7 +26,7 @@ const Contact = () => {
             initial={{opacity:0, x:100}}
             transition={{duration:1}}> Email: </motion.p>
                 <a href='#' className='border-b'>{CONTACT.email}</a>
-
+          
             </div>
   </div>
 }
