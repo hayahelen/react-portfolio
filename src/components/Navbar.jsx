@@ -4,9 +4,17 @@ import { Link } from 'react-scroll';
 
 const Navbar = () => {
   return (
-    <nav className='mb-20 flex items-center justify-between py-6'>
-      <div className='flex flex-auto items-center'>
-        <ul className='flex gap-8 text-lg'>
+    <nav className='fixed top-0 w-full bg-neutral-900 bg-opacity-80 backdrop-blur-md shadow-md z-50'>
+      <div className='container mx-auto flex flex-col md:flex-row items-center justify-between px-6 py-4'>
+        {/* Branding */}
+        <div className='text-2xl font-bold text-cyan-400 mb-4 md:mb-0'>
+          <Link to='hero' smooth={true} duration={500} className='cursor-pointer'>
+            MyPortfolio
+          </Link>
+        </div>
+
+        {/* Navigation Links */}
+        <ul className='flex flex-col md:flex-row gap-4 md:gap-8 text-lg'>
           <li>
             <Link
               to='hero'
@@ -14,7 +22,7 @@ const Navbar = () => {
               duration={500}
               className='cursor-pointer hover:text-cyan-400'
             >
-              Hello
+              Hero
             </Link>
           </li>
           <li>
@@ -68,24 +76,26 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-      </div>
-      <div className='m-8 flex items-center justify-center gap-4 text-2xl'>
-        <a
-          href='https://www.linkedin.com/in/haya-helen-hani-1179a899/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='hover:text-cyan-400'
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href='https://github.com/hayahelen'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='hover:text-cyan-400'
-        >
-          <FaGithub />
-        </a>
+
+        {/* Social Icons */}
+        <div className='flex items-center gap-4 text-2xl mt-4 md:mt-0'>
+          <a
+            href='https://www.linkedin.com'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='hover:text-cyan-400'
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href='https://github.com'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='hover:text-cyan-400'
+          >
+            <FaGithub />
+          </a>
+        </div>
       </div>
     </nav>
   );
