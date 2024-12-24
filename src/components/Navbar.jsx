@@ -24,16 +24,7 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <ul className='hidden peer-checked:flex peer-checked:flex-col peer-checked:items-center md:flex md:flex-row items-center gap-6 text-sm font-medium mt-4 md:mt-0 mx-auto'>
-          <li>
-            <Link
-              to='hero'
-              smooth={true}
-              duration={500}
-              className='cursor-pointer hover:text-cyan-400 transition duration-300'
-            >
-              Hero
-            </Link>
-          </li>
+          
           <li>
             <Link
               to='about'
